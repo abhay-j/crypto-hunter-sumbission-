@@ -73,7 +73,7 @@ const CoinPage = () => {
       setCoin(data);
     };
     fetchCoin();
-  }, []);
+  }, [id]);
   console.log(coin);
 
   return (

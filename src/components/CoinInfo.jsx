@@ -43,7 +43,7 @@ const CoinInfo = ({ coin }) => {
       setHistorical(data.prices);
     };
     fetchHistoricalData();
-  }, [currency, days]);
+  }, [currency, days, coin?.id]);
   const darkTheme = createTheme({
     palette: {
       primary: {
