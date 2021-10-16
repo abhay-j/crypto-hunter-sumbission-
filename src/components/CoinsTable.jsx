@@ -51,14 +51,12 @@ const CoinsTable = () => {
   const [search, setSearch] = useState("");
   const { currency, symbol } = CryptoState();
 
-  const fetchCoinsData = async () => {
+  const fetchCoinsData = async () => {};
+  useEffect(async () => {
     setLoading(true);
     const { data } = await axios.get(CoinList(currency));
     setCoins(data);
     setLoading(false);
-  };
-  useEffect(() => {
-    fetchCoinsData();
   }, [currency]);
   console.log("coins", coins);
   const darkTheme = createTheme({
